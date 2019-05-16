@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 ###
+
+# jajajajja
 from django.views.generic import (
 	ListView, 
 	DetailView, 
