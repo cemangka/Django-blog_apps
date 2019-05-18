@@ -1,9 +1,7 @@
 from django.shortcuts import render
 
 # Create your views here.
-###
 
-# jajajajja
 from django.views.generic import (
 	ListView, 
 	DetailView, 
@@ -15,6 +13,12 @@ from django.urls import reverse_lazy
 
 # load model
 from .models import Article, Category
+
+from .forms import ArticleForm
+
+class CreateArticleView(CreateView):
+    form_class = ArticleForm
+    template_name = 'article/article_create.html'
 
 
 class ArticleListCategoryView(ListView):
