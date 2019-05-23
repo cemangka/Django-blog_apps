@@ -22,16 +22,22 @@
         <label for="{{form.body.id_for_label}}">{{form.body.label}} : </label>
         <textarea name="{{form.body.name}}" rows="10" class="form-control" required id = "{{form.body.id_for_label}}"></textarea>
     </div>
-    <div class="form-group">
-        <label for="{{form.category.id_for_label}}">{{form.category.label}} : </label>
-        <select name="{{form.category.name}}" required id="{{form.category.id_for_label}}">
+    <div class="form-group col-md-4">
+        <!-- {% for a in  form.category %}
+        <h1>{{a}}</h1><br/>
+        <h2>{{a.pk}}</h2><br/>
+        <h3>{{a.value}}</h3><br/>
+         {% endfor %} -->
+
+
+    <label for="{{form.category.id_for_label}}">{{form.category.label}} : </label>
+    <select name="{{form.category.name}}" required id="{{form.category.id_for_label}}" class="form-control">
+        {% for a in  form.category %}
+           <div>{{a}}</div>
+        {% endfor %}
             
-            {% for a in  form.category %}
-                <option value="{{a}}">{{a.value}}</option>
-            {% endfor %}
-                
-        </select>
-    </div>
+    </select>
+</div>
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
 {% endblock contents %}
