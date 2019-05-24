@@ -16,6 +16,21 @@ from .models import Article, Category
 
 from .forms import ArticleForm
 
+class UpdateArticle(UpdateView):
+    form_class = ArticleForm
+    model = Article
+    template_name = 'article/article_update.html'
+
+class DeleteArticle(DeleteView):
+    model = Article
+    template_name = 'article/article_delete_confirmation.html'
+    success_url = reverse_lazy('article:manage')
+
+class ManageArticle(ListView):
+    model = Article
+    template_name = 'article/article_manage.html'
+    context_object_name = 'articles'
+
 class CreateArticleView(CreateView):
     form_class = ArticleForm
     template_name = 'article/article_create.html'

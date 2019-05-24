@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-	  <a class="navbar-brand" href="#">BLOG</a>
+	  <a class="navbar-brand" href="{% url 'home' %}">BLOG</a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
@@ -18,8 +18,8 @@
 	          User
 	        </a>
 	        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-	          <a class="dropdown-item" href="{%url 'article:create' %}">Add Articl</a>
-	          <a class="dropdown-item" href="#">Manage artikel</a>
+	          <a class="dropdown-item" href="{%url 'article:create' %}">Add Article</a>
+	          <a class="dropdown-item" href="{%url 'article:manage' %}">Manage Article</a>
 	          
 	        </div>
 	    </div>
